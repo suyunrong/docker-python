@@ -32,8 +32,8 @@ RUN mkdir /var/run/sshd \
   && mkdir /root/.ssh \
   && echo 'root:123456' |chpasswd \
   && sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config \
-  && sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config \
-  && /etc/init.d/sshd start
+  && sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
+#  && /etc/init.d/sshd start
 
 EXPOSE 22
 
