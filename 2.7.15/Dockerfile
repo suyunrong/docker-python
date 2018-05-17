@@ -10,7 +10,7 @@ ENV LANG C.UTF-8
 # Install base package
 #=======================================
 RUN apt-get update -qqy \
-  && apt-get install \
+  && apt-get install -qqy \
     tzdata \
     openssh-server \
   && rm -rf /var/lib/apt/lists/* \
