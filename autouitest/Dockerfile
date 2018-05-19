@@ -28,7 +28,7 @@ RUN mkdir /var/run/sshd \
   && echo 'root:123456' |chpasswd \
   && sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config \
   && sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config \
-  && /usr/sbin/sshd start
+  && /usr/sbin/sshd
 
 #=======================================
 #pip3 package
