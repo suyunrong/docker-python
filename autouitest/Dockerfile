@@ -23,6 +23,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
 #pip3 package
 #=======================================
 COPY requirements.txt /tmp/
-RUN pip3 -r /tmp/requirements.txt
+RUN pip3 install -r /tmp/requirements.txt
 
 CMD ["python3"]
